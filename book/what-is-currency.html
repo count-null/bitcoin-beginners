@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>What is Currency? - Bitcoin Owner's Manual</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The example book covers examples.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="what-is-btc.html">What is Bitcoin?</a></li><li class="chapter-item expanded affix "><a href="you-can-own-a-fraction-of-a-bitcoin.html">You can Own a Fraction of a Bitcoin</a></li><li class="chapter-item expanded affix "><a href="what-is-currency.html" class="active">What is Currency?</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Bitcoin Owner's Manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#what-is-currency" id="what-is-currency">What is Currency?</a></h1>
+<p>Many things have been used as currency. Ancient civilizations used gold coins,
+prisoner's use cigarettes, nations use paper bills backed by the state, and video
+games use points. Just about anything can be used as a currency and traded for
+goods and services.</p>
+<h1><a class="header" href="#the-roles-of-money" id="the-roles-of-money">The Roles of Money</a></h1>
+<p>Whenever something is used as a currency, its because it fulfills the three roles
+of a good money.</p>
+<ol>
+<li>Store of Value</li>
+<li>Medium of Exchange</li>
+<li>Unit of Account</li>
+</ol>
+<p>Let's define each of these roles that make a good money.</p>
+<h2><a class="header" href="#store-of-value" id="store-of-value">Store of Value</a></h2>
+<p>A good money maintains its value over time. This enables people to save and spend
+the money at a later date without penalty.</p>
+<h2><a class="header" href="#medium-of-exchange" id="medium-of-exchange">Medium of Exchange</a></h2>
+<p>A good money can be used to intermediate the exchange of goods and services. It
+provides a common ground for determining value.</p>
+<h2><a class="header" href="#unit-of-account" id="unit-of-account">Unit of Account</a></h2>
+<p>A good money is used as the standard numerical unit for measuring the value of
+goods and services. When a money is the unit of account, all prices are measured
+in terms of the currency.</p>
+<p>Additionally, the roles of money build off of one another. You cannot have a money
+which is a unit of account without also being a store of value.</p>
+<p>A good money has to be a store of value first. That way people will use it to
+store their wealth and to save. Only then, can a money become a medium of exchange.
+Once it becomes a medium of exchange, only then can it be widely used to measure
+prices, becoming a unit of account.</p>
+<p>So what makes something a good store of value? What causes people to use a money
+as a medium of exchange? And how does a money become used for marking prices?</p>
+<h1><a class="header" href="#the-properties-of-money" id="the-properties-of-money">The Properties of Money</a></h1>
+<p>In addition to the three roles that money plays, money also can have several
+properties that allow it to achieve those roles.</p>
+<ol>
+<li>Durability</li>
+<li>Scarcity</li>
+<li>Fungibility</li>
+<li>Portability</li>
+<li>Divisibility</li>
+<li>Acceptability</li>
+</ol>
+<p>Let's define each of the properties that a good money can have.</p>
+<h2><a class="header" href="#durability" id="durability">Durability</a></h2>
+<p>A good money has to be durable -- able to withstand being used many times. It may
+even have to survive a few cycles in the washing machine.</p>
+<h2><a class="header" href="#scarcity" id="scarcity">Scarcity</a></h2>
+<p>A good money is scarce -- the supply in circulation must be limited to maintain
+a constant value. When a money isn't scarce, inflation occurs.</p>
+<h2><a class="header" href="#fungibility" id="fungibility">Fungibility</a></h2>
+<p>A good money has to be fungible -- one unit has to be interchangeable with another.
+Apples, for example, are not fungible because one apple can be better than another.</p>
+<h2><a class="header" href="#portability" id="portability">Portability</a></h2>
+<p>A good money is portable -- it fits in your pocket. This makes it convenient to
+trade.</p>
+<h2><a class="header" href="#divisibility" id="divisibility">Divisibility</a></h2>
+<p>A good money is divisible -- able to be divided into smaller units. This allows
+the same money to buy everything from a house to a piece of chewing gum.</p>
+<h2><a class="header" href="#acceptability" id="acceptability">Acceptability</a></h2>
+<p>A good money is widely acceptable -- people are willing and able to accept it
+as payment.</p>
+<p>These properties are what allow something to achieve the roles of a good money.</p>
+<h2><a class="header" href="#is-it-money" id="is-it-money">Is it money?</a></h2>
+<ul>
+<li>Is gold money?</li>
+</ul>
+<p>Gold is a good store of value because it's durable and scarce.</p>
+<p>Gold is a good medium of exchange because it's fungible and portable.</p>
+<p>Gold is a good unit of account because it's divisible and widely accepted.</p>
+<ul>
+<li>Are houses money?</li>
+</ul>
+<p>Houses are a good store of value because they can be used for generations (durable),
+and they are scarce.</p>
+<p>But houses are not portable, or fungible -- all houses are not valued the same.
+Therefore, houses are not a medium of exchange.</p>
+<p>Houses are not money.</p>
+<ul>
+<li>Is fiat money?</li>
+</ul>
+<p>Fiat currencies are a decent store of value - they are durable and while the amount
+in circulation is always increasing (causing inflation) there is still a limited amount.</p>
+<p>Fiat currencies are a good medium of exchange - they are portable in the form of
+paper bills and extremely portable in the form of digital account balances and credit.
+Fiat is fungible.</p>
+<p>Fiat currencies are used as the unit of account within its nation state. The state
+demands payment of taxes in the currency helping to make the currency widely
+acceptable for payment. Fiat currencies are also divisible enough to pay for most goods.</p>
+<ul>
+<li>Is Bitcoin money?</li>
+</ul>
+<p>Its too soon to call Bitcoin a store of value although, it certainly acts like one.
+Bitcoin's price is very volatile but it trends upwards. Every year, the lowest
+value of a bitcoin is higher than the year before. Bitcoins are certainly scarce
+and a bitcoin never wears out.</p>
+<p>Since we can't call Bitcoin a store of value yet, we also can't call it a medium
+of exchange. However, bitcoin is mostly fungible (we'll see why it's not purely
+fungible today in the privacy section) and it's very portable.</p>
+<p>Bitcoin certainly isn't a unit of account today. Its value fluctuates too much for
+most people to accept it. However, bitcoin is much more divisible than any other
+money we have. This allows sending tiny fractions of a penny to pay for things
+you might not have imagined that someone could be paid for. (See micro-transactions
+section)</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="you-can-own-a-fraction-of-a-bitcoin.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="you-can-own-a-fraction-of-a-bitcoin.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

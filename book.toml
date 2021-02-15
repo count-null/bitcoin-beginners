@@ -1,0 +1,16 @@
+[book]
+title = "Bitcoin Owner's Manual"
+author = "Rob Hodl"
+description = "The example book covers examples."
+src = "chapters"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[preprocessor.index]
+
+[preprocessor.links]
+
+[output.html.search]
+limit-results = 15
